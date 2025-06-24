@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внеурочная деятельность СЭМК</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+             <img src="logo.png">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">О НАС</a></li>
+                <li><a href="#events" class="nav-link">МЕПРОПРИЯТИЯ</a></li>
+                <li><a href="#unions" class="nav-link">МОЛОДЕЖНЫЕ ОБЪЕДИНЕНИЯ</a></li>
+                <li><a href="#projects" class="nav-link">ПРОЕКТЫ</a></li>
+                <li><a href="#news" class="nav-link">НОВОСТИ</a></li>
+                <li><a href="#contacts" class="nav-link">КОНТАКТЫ</a></li>
+            </ul>
+                <button class="vision-button" onclick="toggleVisionMode()">Версия для слабовидящих</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="full-width-slider">
+            <div class="slider">
+                <div class="slide"><img src="slide2.jpg"></div>
+                <div class="slide"><img src="slide1.jpg"></div>
+                <div class="slide"><img src="slide3.jpg"></div>
+               
+            </div>
+        </section>
+
+       <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Поиск...">
+        <button onclick="searchSite()"><i class="fas fa-search"></i></button>
+        <div id="search-suggestions" class="search-suggestions">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+        <section id="about" class="section">
+            <h2>О нас</h2>
+            <p>Внеурочная деятельность ГБПОУ РМ "Саранского электромеханического колледжа" направлена на всестороннее развитие
+                личности студента, формирование активной гражданской позиции, развитие творческих способностей и
+                организацию досуга. Мы предлагаем широкий спектр мероприятий и объединений, чтобы каждый студент мог
+                найти себе занятие по интересам и раскрыть свой потенциал.</p>
+            <p>Наша цель – создать благоприятную среду для самореализации студентов, развития их лидерских качеств и
+                формирования команды единомышленников.</p>
+            <button class="more-button" onclick="openModal('aboutModal')">Подробнее</button>
+        </section>
+
+        <section id="events" class="section">
+            <h2>Мероприятия</h2>
+
+            <div class="event-card">
+                <img src="foto2.jpg" alt="День первокурсника">
+                <h3>День первокурсника</h3>
+                <p>Традиционное мероприятие, посвященное знакомству новых студентов с колледжем.</p>
+                <button class="more-button" onclick="openModal('event1Modal')">Подробнее</button>
+            </div>
+
+            <div class="event-card">
+                <img src="foto1.jpg" alt="Отчетный концерт Все Вместе">
+                <h3>Отчетный концерт "Все Вместе"</h3>
+                <p>Ежегодный концерт на котором студенты показывают номера которые подготавливали со своими младшими кураторами</p>
+                <button class="more-button" onclick="openModal('event2Modal')">Подробнее</button>
+            </div>
+           
+        </section>
+
+     
+        <section id="unions" class="section">
+            <h2>Молодежные объединения</h2>
+
+            <div class="union-card">
+                <img src="foto3.jpg">
+                <h3>Волонтерский отряд "Колокол"</h3>
+                <p>Объединение студентов, занимающихся добровольческой деятельностью: помощь ветеранам, участие в
+                    благотворительных акциях, организация экологических мероприятий.</p>
+                <button class="join-button" onclick="openModal('union1Modal')">Подать заявку</button>
+            </div>
+
+            <div class="union-card">
+                <img src="foto4.jpg">
+                <h3>Студенческий совет</h3>
+                <p>Организация различных мероприятий проводимых в колледже. День первокурсника, адаптационная программа "Все Вместе" и многое другое...</p>
+                <button class="join-button" onclick="openModal('union2Modal')">Подать заявку</button>
+            </div>
+
+        </section>
+>
+        <section id="projects" class="section">
+            <h2>Проекты</h2>
+            <div class="projects-slider">
+                <div class="project-card">
+                    <h3>"СЭМК – территория здоровья"</h3>
+                    <p>Проект, направленный на пропаганду здорового образа жизни среди студентов: организация спортивных
+                        мероприятий, лекции о здоровом питании, профилактика вредных привычек.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>"Мы помним!"</h3>
+                    <p>Проект, посвященный сохранению памяти о героях Великой Отечественной войны: организация встреч с
+                        ветеранами, проведение тематических мероприятий, уход за памятниками.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>"Экологический патруль"</h3>
+                    <p>Проект, направленный на улучшение экологической обстановки в колледже и городе: организация
+                        субботников, проведение экологических акций, пропаганда раздельного сбора мусора.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="section">
+            <h2>Новости</h2>
+            <div class="news-slider">
+                <div class="news-item">
+                    <h3>День электросвязи</h3>
+                    <p>В честь Дня электросвязи и информационного общества студенты второго курса Саранского электромеханического колледжа, 
+                        обучающиеся по специальности «Информационные системы и программирование», 
+                        посетили контактный центр одной из ведущих телекоммуникационных компаний региона.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Научно-практическая конференция исследовательских работ «Наука и Экология_2025»</h3>
+                    <p>27 мая, в Саранском электромеханическом колледже состоялась 
+                        Научно-практическая конференция исследовательских работ «Наука и Экология_2025», 
+                        организованная МО «ЭкоВзгляд» под руководством Мартыновой Л. М. и Осановой Т. Н.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Подведены итоги Суперфинала по стритболу 3×3, который прошёл в Перми!</h3>
+                    <p>В рамках турниров сезона 2024–2025 гг. 
+                        по баскетболу 3x3 среди студентов вузов, обучающихся колледжей и школьников из малых городов и сёл 
+                        Приволжского федерального округа определены сильнейшие команды.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contacts" class="section">
+            <h2>Контакты</h2>
+            <p>Если у вас есть вопросы или предложения, свяжитесь с нами:</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Ваш email">
+                <input type="number" placeholder="Ваш телефон">
+                <textarea placeholder="Ваши предложения и пожелания"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+            <p>Мы будем рады ответить на ваши вопросы и учесть ваши пожелания.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#about">О нас</a> |
+            <a href="#events">Мероприятия</a> |
+            <a href="#unions">Молодежные объединения</a> |
+            <a href="#projects">Проекты</a> |
+            <a href="#news">Новости</a> |
+            <a href="#contacts">Контакты</a>
+        </div>
+        <div class="footer-contacts">
+            <p>Саранский электромеханический колледж</p>
+            <p>Адрес: ул. Транспортная, 11</p>
+            <p>Телефон: +7 (8342) 332006</p>
+            <p>Email:  koll.elmechan.sar@e-mordovia.ru</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://vk.com/semk_professionalitet?from=groups"><i class="fab fa-vk"></i></a>
+            <a href="https://t.me/klastertehkabel"><i class="fab fa-telegram"></i></a>
+        </div>
+    </footer>
+
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('aboutModal')">&times;</span>
+            <h2>О нас</h2>
+            <p>Внеурочная деятельность Саранского электромеханического колледжа – это важная составляющая
+                образовательного процесса, направленная на формирование гармонично развитой личности студента. Мы
+                стремимся создать условия для самореализации студентов в различных сферах деятельности, развития их
+                творческих способностей, лидерских качеств и активной гражданской позиции.</p>
+            <p>Основные направления внеурочной деятельности СЭМК:</p>
+            <ul>
+                <li>Культурно-массовая работа: организация концертов, конкурсов, фестивалей, посещение театров и
+                    музеев.</li>
+                <li>Спортивно-оздоровительная работа: организация спортивных секций и соревнований, проведение дней
+                    здоровья, пропаганда здорового образа жизни.</li>
+                <li>Волонтерская деятельность: участие в благотворительных акциях, помощь ветеранам и нуждающимся,
+                    организация экологических мероприятий.</li>
+                <li>Научно-исследовательская работа: организация научных конференций, участие в олимпиадах и конкурсах,
+                    подготовка научных публикаций.</li>
+                <li>Работа с молодежными объединениями: поддержка и развитие студенческих клубов и объединений по
+                    интересам.</li>
+            </ul>
+            <p>Внеурочная деятельность СЭМК – это возможность для каждого студента найти себе занятие по душе, раскрыть
+                свой потенциал и стать активным членом студенческого сообщества.</p>
+        </div>
+    </div>
+
+    <div id="event1Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('event1Modal')">&times;</span>
+            <h2>День первокурсника</h2>
+            <p>Вы можете стать свидетелями НЕВЕРОЯТНОГО концерта "Все Вместе", 
+                где наш колледж вспыхнет яркими красками талантов! Все первые курсы выступят с КРУТЕЙШИМИ номерами!</p>
+            <ul>
+                <li>Каждое выступление, будь то танец, песня или визитка, запомнится вам надолго. Это будет возможность показать все свои таланты и порадовать зрителей!</li>
+                <li>Концертная программа: выступления творческих ребят колледжа и их замечательных кураторов.
+                </li>
+                <li> На концерте будут только студенты, но и наши ЗАМЕЧАТЕЛЬНЫЕ выпускники, которые пришли поддержать наших первокурсников и разделить этот КРУТОЙ момент. Вместе создадим свой особый вайб!</li>
+                <li>Если хотел бы посетить данное мероприятие то оставляй свою заявку!</li>
+            </ul>
+            <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Ваш email">
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="event2Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('event2Modal')">&times;</span>
+            <h2>Научно-практическая конференция</h2>
+            <p>Научно-практическая конференция студентов СЭМК – это ежегодное мероприятие, которое проводится с целью
+                активизации научно-исследовательской деятельности студентов, выявления и поддержки талантливой молодежи,
+                а также обмена опытом и знаниями между студентами и преподавателями.</p>
+            <p>Основные задачи конференции:</p>
+            <ul>
+                <li>Развитие у студентов интереса к научно-исследовательской деятельности.</li>
+                <li>Совершенствование навыков самостоятельной работы с научной литературой.</li>
+                <li>Приобретение опыта публичных выступлений и защиты своих научных работ.</li>
+                <li>Установление контактов между студентами и преподавателями различных специальностей.</li>
+            </ul>
+            <p>На конференции представляются научные работы и проекты студентов в различных областях знаний: техника и
+                технологии, экономика и управление, гуманитарные и социальные науки. Лучшие работы отмечаются
+                дипломами и призами.</p>
+            <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Ваш email">
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="union1Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('union1Modal')">&times;</span>
+            <h2>Заявка на вступление в волонтерский отряд "Колокол"</h2>
+            <p>Заполните форму для подачи заявки:</p>
+            <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Ваш email">
+                <textarea placeholder="Почему вы хотите вступить в волонтерский отряд"></textarea>
+                <button type="submit">Отправить заявку</button>
+            </form>
+            <p>Мы будем рады видеть вас в нашем отряде!</p>
+        </div>
+    </div>
+
+    <div id="union2Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('union2Modal')">&times;</span>
+            <h2>Заявка на вступление в Студенчечкий совет </h2>
+            <p>Заполните форму для подачи заявки:</p>
+            <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Ваш email">
+                <textarea placeholder="Почему вы хотите вступить в спортивный клуб"></textarea>
+                <button type="submit">Отправить заявку</button>
+            </form>
+            <p>Присоединяйтесь к нашей активной студенческой жизни!</p>
+        </div>
+    </div>
+
+    <div id="search-results" class="search-results"></div>
+
+    <script src="script.js"></script>
+
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+    <script>
+    $(document).ready(function () {
+
+        $('.slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 600,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 6000
+        });
+
+        $('.news-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 600,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
+
+        $('.projects-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
+</body>
+
+</html>
